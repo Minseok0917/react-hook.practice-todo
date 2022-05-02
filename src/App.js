@@ -1,10 +1,10 @@
-import Todo from '@/pages/Todo';
+import Trello from '@/pages/Trello';
 
 function App() {
 
 	return (
 	  <div className="App">
-	  	<Todo />
+	  	<Trello />
 	  </div>
 	);
 }
