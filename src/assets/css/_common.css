@@ -1,3 +1,4 @@
+/* variable */
 :root{
 	--color-red: #fd3434;
 	--color-purple : #ae68e3;
@@ -22,7 +23,7 @@ button{ outline: none; border:0; background: transparent; cursor: pointer; }
 .trello-head .trello-head__insert .insert__input{ width: 320px; }
 .trello-head .trello-head__insert .insert__button{}
 
-.trello-body{ display: flex; flex-wrap: wrap; }
+.trello-body{ display: flex; flex-wrap: wrap; gap:1rem; }
 .trello-body .group{ width: 300px; padding: 0.75rem; border-radius: 5px; background: #f5f5f5; }
 .trello-body .group .group-head{  }
 .trello-body .group .group-head .group-head__view{ position: relative;    }
