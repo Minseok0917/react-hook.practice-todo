@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.cfd96ca2.css",
-    "main.js": "/static/js/main.08739077.js",
-    "index.html": "/index.html",
-    "main.cfd96ca2.css.map": "/static/css/main.cfd96ca2.css.map",
-    "main.08739077.js.map": "/static/js/main.08739077.js.map"
+    "main.css": "/react-hook.practice-trello/static/css/main.cfd96ca2.css",
+    "main.js": "/react-hook.practice-trello/static/js/main.08739077.js",
+    "index.html": "/react-hook.practice-trello/index.html",
+    "main.cfd96ca2.css.map": "/react-hook.practice-trello/static/css/main.cfd96ca2.css.map",
+    "main.08739077.js.map": "/react-hook.practice-trello/static/js/main.08739077.js.map"
   },
   "entrypoints": [
     "static/css/main.cfd96ca2.css",
