@@ -1,10 +1,9 @@
-import Link from '@/components/Link';
+
 
 export default function(){
 	return (
 		<div>
-			<h1>Trello</h1>
-			<Link />
+			<h1>185464564563313128312098</h1>
 		</div>
 	);
 }
