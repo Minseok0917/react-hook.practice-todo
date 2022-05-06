@@ -1,20 +1,33 @@
-import { Link } from '@/components/element';
 import styled from 'styled-components';
 import Gnb from './Gnb';
+import { Link } from '@com/element';
+import { Container  as _Container } from '@com/styled';
 
 
 const Header = styled.header`
-
+	background:#364F6B;
+	padding:1rem 0;
+`;
+const Container = styled(_Container)`
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+`;
+const Logo = styled.h1`
+	margin:0;
+	color:#fff;
+	font-size:1.75rem;
 `;
 
 export default function(){
-	console.log("?3123123312?");
 	return (
 		<Header>
-			<div className="container">
-				<h1>LOGO131</h1>
+			<Container>
+				<Logo>
+					<Link path="/" >TRELLO</Link>
+				</Logo>
 				<Gnb />
-			</div>
+			</Container>
 		</Header>
 	);
 }
