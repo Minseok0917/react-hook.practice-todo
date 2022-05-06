@@ -16,7 +16,8 @@ const Markdown = styled(_Markdown)`
 export default function(){
 	const [content,setContent] = useState('');
 	const fetchMarkdown = useCallback(async() => {
-		const response =  await fetch('/src/assets/markdown/info.md');
+		const baseURL = import.meta.env.BASE_URL;
+		const response =  await fetch(`${ baseURL }assets/markdown/info.md`);
 		const markdownText = await response.text();
 		const html = marked(markdownText);
 		setContent(html);
@@ -24,6 +25,7 @@ export default function(){
 	useEffect(()=>{
 		fetchMarkdown();
 	},[fetchMarkdown]);
+
 	return (
 		<Container>
 			<Markdown dangerouslySetInnerHTML={{ __html:content }} />

@@ -5,14 +5,21 @@ import path from 'path';
 const getPath = (addPath="") => path.join(__dirname,'src',addPath);
 
 
-export default defineConfig({
-	plugins: [react()],
-	resolve:{
-		alias:{
-			'@': getPath(),
-			'@com': getPath('components'),
-			'@con': getPath('contexts'),
-			'@css': getPath('assets/postcss')
+
+export default defineConfig(({mode})=>{
+	const base = (
+		mode === 'github' ? 'react-hook.practice-trello' : ''
+	);
+	return {
+		base,		
+		plugins: [react()],
+		resolve:{
+			alias:{
+				'@': getPath(),
+				'@com': getPath('components'),
+				'@con': getPath('contexts'),
+				'@css': getPath('assets/postcss')
+			}
 		}
 	}
 })

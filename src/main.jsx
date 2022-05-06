@@ -6,12 +6,9 @@ import '@/plugins/icon';
 import App from './App';
 
 
-
-console.log(App);
-
 const $root = document.getElementById('root');
 createRoot($root).render(
-	<BrowserRouter>
+	<BrowserRouter basename={import.meta.env.BASE_URL}>
 		<App />
 	</BrowserRouter>
 );
