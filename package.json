@@ -2,7 +2,7 @@
   "name": "react-hook.practice-todo",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://minseok0917.github.io/react-hook.practice-trello",
+  "homepage":"https://minseok0917.github.io/react-hook.practice-trello/",
   "scripts": {
     "dev": "vite --mode development",
     "build": "vite build",
