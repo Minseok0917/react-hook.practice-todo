@@ -7,12 +7,14 @@ import { PageLoading } from '@com/loading';
 
 export default function(){
 	const Home = lazy(() => import('@/pages/Home'));
-	const Trello = lazy(() => import('@/pages/Trello'));
+	// const Trello = lazy(() => import('@/pages/Trello'));
+	const Category = lazy(() => import('@/pages/Category'));
+	// <Route path="/trello" element={<Trello />} />
 	return (
 		<Suspense fallback={<PageLoading />}>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/trello" element={<Trello />} />
+				<Route path="/category" element={<Category />} />
 			</Routes>
 		</Suspense >
 	);

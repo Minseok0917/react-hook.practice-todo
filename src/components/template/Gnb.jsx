@@ -14,7 +14,7 @@ export default function(){
 	return (
 		<Gnb>
 			<Link path="/">Home</Link>
-			<Link path="/trello">Trello</Link>
+			<Link path="/category">Category</Link>
 		</Gnb>
 	);
 }

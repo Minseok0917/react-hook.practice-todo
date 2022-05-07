@@ -13,7 +13,7 @@ const state = {
 };
 
 
-const trelloContext = createContext();
+export const trelloContext = createContext();
 export default function({children}){
 	const [stat,dispatch] = useReducer(reducer,state);
 	return (

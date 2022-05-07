@@ -1,10 +1,20 @@
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  import styled from 'styled-components';
+
+  const Icon = styled(FontAwesomeIcon)`
+  	font-size:${ (props) => props.fontSize || '1rem' }
+  	color:${ (props) => props.color || '#333' }
+  `;
 
   export default function(props){
-  	const icon = props.name.split('-');
-  	icon.length === 1 && icon.unshift('fab');
+  	const icons = props.name.split('-');
+  	icons.length === 1 && icons.unshift('fab');
+
+    const [prefix,...icon] = icons;
+    const iconValue = [prefix,icon.join('-')];
+
   	
   	return (
-  		<FontAwesomeIcon icon={icon} />
+  		<Icon icon={iconValue} {...props}  />
   	);
   }
