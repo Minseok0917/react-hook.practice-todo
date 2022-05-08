@@ -1,0 +1,1 @@
+import{u as a,j as e}from"./index.f79f57ff.js";var r="D:\\Github\\react-hook.practice-trello\\src\\pages\\Trello.jsx";function o(){const s=a().idx;return e.exports.jsxDEV("div",{children:e.exports.jsxDEV("h1",{children:s},void 0,!1,{fileName:r,lineNumber:8,columnNumber:4},this)},void 0,!1,{fileName:r,lineNumber:7,columnNumber:3},this)}export{o as default};
