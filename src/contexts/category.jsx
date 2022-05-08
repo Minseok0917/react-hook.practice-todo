@@ -1,18 +1,25 @@
 import { createContext, useState, useContext, useReducer } from 'react';
+import storage from '@/helpers/localStorage';
 
 
-const initialState = [];
+
+
+const initialState =  storage.get('category') || [];
 
 
 const reducer = (state,action) => {
 	switch(action.type){
 		case 'add':
-			return [...state,{
+			const addState = [...state,{
 				name:action.name,
 				trello:[]
 			}];
+			storage.set('category',addState);
+			return addState;
 		case 'remove':
-			return state.filter( ({name}) => name !== action.name );
+			const removeState = state.filter( ({name}) => name !== action.name );
+			storage.set('category',removeState);
+			return removeState;
 		case 'update':
 			return state;
 		default:

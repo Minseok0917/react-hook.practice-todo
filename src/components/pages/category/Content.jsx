@@ -38,16 +38,19 @@ export default function(){
 	return (
 		<article>
 			<Container>
-				{context.state.map( ({name})  => (
-					<Item key={name}>
-						<Title>
-							<Link path="/"  key={name} >{name}</Link>
-						</Title>
-						<Button onClick={()=>onClick(name)}>
-							<Icon name="fas-xmark" />
-						</Button>
-					</Item>
-				))}
+				{context.state.map( ({name},idx)  => {
+					const path = `/trello/${idx}`;
+					return (
+						<Item key={name}>
+							<Title>
+								<Link path={path}  key={name} >{name}</Link>
+							</Title>
+							<Button onClick={()=>onClick(name)}>
+								<Icon name="fas-xmark" />
+							</Button>
+						</Item>
+					)
+				})}
 			</Container>
 		</article>
 	);

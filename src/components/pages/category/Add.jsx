@@ -29,18 +29,23 @@ export default function(){
 		const isAdd = ['Enter','Space','Tab'].includes(e.code);
 		if( isAdd ){
 			e.preventDefault();
-			const value = $input.current.value.trim();
-			if( value.length && !context.state.some( ({name}) => name === value ) ){
-				context.add(value);
-				$input.current.value = '';
-			}
+			addCategory();
 		}
 	},[context.state]);
+
+	const addCategory = useCallback(() => {
+		const value = $input.current.value.trim();
+		if( value.length && !context.state.some( ({name}) => name === value ) ){
+			context.add(value);
+			$input.current.value = '';
+		}
+	},[context.state]);
+
 	return (
 		<article>
 			<Container>
 				<Input ref={$input} placeholder="write category...." onInput={onInput} onKeyDown={onKeyDown} />
-				<Button>ADD CATEGORY</Button>
+				<Button onClick={addCategory}>ADD CATEGORY</Button>
 			</Container>
 		</article>
 	);
