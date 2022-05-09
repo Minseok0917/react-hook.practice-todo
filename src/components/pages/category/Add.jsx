@@ -44,7 +44,7 @@ export default function(){
 	return (
 		<article>
 			<Container>
-				<Input ref={$input} placeholder="write category...." onInput={onInput} onKeyDown={onKeyDown} />
+				<Input ref={$input} placeholder="write category...." onInput={onInput} onKeyDown={onKeyDown} autoFocus />
 				<Button onClick={addCategory}>ADD CATEGORY</Button>
 			</Container>
 		</article>

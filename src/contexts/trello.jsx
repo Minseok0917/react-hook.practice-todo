@@ -1,4 +1,6 @@
 import { createContext, useContext, useReducer } from 'react';
+import { useParams } from "react-router-dom";
+
 
 
 const reducer = (state,action) => {
@@ -8,16 +10,21 @@ const reducer = (state,action) => {
 	}
 };
 
-const state = {
+const initialState = {
 	
 };
 
 
 export const trelloContext = createContext();
 export default function({children}){
-	const [stat,dispatch] = useReducer(reducer,state);
+	const params = useParams();
+	const [state,dispatch] = useReducer(reducer,initialState);
+	const value = [
+		state,
+		dispatch
+	];
 	return (
-		<trelloContext.Provider>
+		<trelloContext.Provider value={value}>
 			{children}
 		</trelloContext.Provider>
 	);
